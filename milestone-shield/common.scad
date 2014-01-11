@@ -1,3 +1,5 @@
+include <params.scad>;
+
 module connector(){
 	difference(){
 		union(){
@@ -41,4 +43,10 @@ module put_rotated_2(){
 	rotate([0, 0, 180])
 		for(i = [0:$children-1])
 			child(i);
+}
+
+module drop(width, height, depth){
+	translate([width / 2, height / 2, 0])
+		rotate([180, 180, 180])
+			cube([width, height, depth]);
 }
