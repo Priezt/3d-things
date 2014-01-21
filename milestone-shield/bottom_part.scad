@@ -40,6 +40,6 @@ translate([bottom_part_width / 2, bottom_part_height / 2, shield_common_thicknes
 
 translate([phone_width / 2, 0, 0])
 	rotate([0, 0, 180])
-		pile();
+		pile(0.5);
 translate([phone_width / 2, phone_height + shield_common_thickness * 2, 0])
-	pile();
+	pile(0.5);
