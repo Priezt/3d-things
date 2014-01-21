@@ -2,20 +2,21 @@ $fn = 20;
 
 very_long = 500;
 short_length = 1;
+free_space = 1;
 
 // phone
-phone_width = 59.6;
-phone_height = 115.8;
+phone_width = 59.6 + free_space * 2;
+phone_height = 115.8 + free_space * 2;
 phone_bottom_thickness = 9.0;
-phone_total_thickness = 14.5;
-phone_top_thickness = phone_total_thickness - phone_bottom_thickness;
+phone_total_thickness = 14.5 + free_space * 2;
+phone_top_thickness = phone_total_thickness - phone_bottom_thickness + free_space;
 phone_speaker_width = 19.7;
 phone_speaker_to_edge = 9.0;
 phone_screen_bottom_to_edge = 7.1;
 phone_screen_top_to_edge = 13.9;
 phone_left_top_to_edge = 5.6;
 phone_right_top_to_edge = 6.6;
-phone_screen_length = phone_height - phone_screen_bottom_to_edge;
+phone_screen_length = phone_height - phone_screen_bottom_to_edge + free_space;
 phone_usb_to_top = 31.5;
 phone_usb_to_back = 2;
 phone_usb_width = 12.8;

@@ -50,3 +50,20 @@ module drop(width, height, depth){
 		rotate([180, 180, 180])
 			cube([width, height, depth]);
 }
+
+module pile(ratio=1){
+	stick_length = 20 * ratio;
+	ring_radius = 12 * ratio;
+	ring_width = 5 * ratio;
+	stick_width = 5 * ratio;
+	thickness = 3;
+	union(){
+		translate([-stick_width/2, 0, 0])
+			cube([stick_width, stick_length, thickness]);
+		translate([0, stick_length, 0])
+			difference(){
+				cylinder(thickness, ring_radius, ring_radius);
+				cylinder(thickness, ring_radius - ring_width, ring_radius - ring_width);
+			}
+	}
+}
