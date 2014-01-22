@@ -30,11 +30,6 @@ difference(){
 		translate([upper_part_width, 0, phone_bottom_thickness])
 			rotate([0, 0, 90])
 				cube([shield_common_thickness + phone_screen_length, shield_common_thickness, phone_top_thickness]);
-		translate([phone_width / 2, 0, 0])
-			rotate([0, 0, 180])
-				pile(0.5);
-		translate([phone_width / 2, phone_height + shield_common_thickness * 2, 0])
-			pile(0.5);
 	}
 	translate([upper_part_width / 2 - phone_speaker_width / 2, phone_speaker_to_edge,  phone_total_thickness])
 		cube([phone_speaker_width, phone_screen_top_to_edge - phone_speaker_to_edge, shield_common_thickness]);
