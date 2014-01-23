@@ -24,6 +24,7 @@ phone_usb_height = phone_bottom_thickness - phone_usb_to_back;
 phone_mic_radius = 5;
 phone_power_to_right = 3.5;
 phone_power_width = 20.5;
+phone_power_button_hole_height = 10;
 phone_volume_button_to_bottom = 4;
 phone_volume_button_to_edge = 12.2;
 phone_volume_button_width = 20.6;
@@ -35,7 +36,7 @@ phone_camera_center_to_top = 16.8;
 phone_camera_radius = 5.3;
 
 // connector
-connector_thickness = 3.0;
+connector_thickness = 4.0;
 connector_radius = 5.0;
 
 // shield
