@@ -50,9 +50,9 @@ screw_cap_diameter = 5.0;
 
 // belt
 belt_connector_width = 8;
-belt_connector_length = 30;
+belt_connector_length = 32;
 belt_connector_thickness = 5;
-belt_hole_length = 20;
+belt_hole_length = 25;
 belt_hole_thickness = 2.5;
 belt_connector_from_edge = 5;
 belt_round_radius = 1.5;
