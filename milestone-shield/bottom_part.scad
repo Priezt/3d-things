@@ -17,9 +17,20 @@ difference(){
 			shield_common_thickness
 		]);
 	translate([shield_common_thickness + phone_camera_center_to_left, shield_common_thickness + phone_height - phone_camera_center_to_top, 0])
-		cylinder(shield_common_thickness, phone_camera_radius, phone_camera_radius);
+		union(){
+			cylinder(shield_common_thickness, phone_camera_radius, phone_camera_radius);
+			translate([phone_camera_radius, 0, 0])
+				rotate([0, 0, 180])
+					cube([phone_camera_radius * 2, phone_camera_radius * 1.5, shield_common_thickness]);
+		}
 }
 connector4(bottom_part_width, bottom_part_height);
+translate([0, bottom_part_height / 2, 0])
+	rotate([0, 0, 90])
+		connector();
+translate([bottom_part_width, bottom_part_height / 2, 0])
+	rotate([0, 0, -90])
+		connector();
 
 module belt_connector(){
 	difference(){

@@ -8,7 +8,7 @@ free_space = 1;
 phone_width = 59.6 + free_space * 2;
 phone_height = 115.8 + free_space * 2;
 phone_bottom_thickness = 9.0;
-phone_total_thickness = 14.5 + free_space * 2;
+phone_total_thickness = 14.5 + free_space;
 phone_top_thickness = phone_total_thickness - phone_bottom_thickness + free_space;
 phone_speaker_width = 19.7;
 phone_speaker_to_edge = 9.0;
@@ -27,10 +27,10 @@ phone_power_width = 20.5;
 phone_power_button_hole_height = 10;
 phone_volume_button_to_bottom = 4;
 phone_volume_button_to_edge = 12.2;
-phone_volume_button_width = 20.6;
+phone_volume_button_width = 22.6;
 phone_camera_button_to_bottom = phone_volume_button_to_bottom;
 phone_camera_button_to_edge = 17;
-phone_camera_button_width = 13;
+phone_camera_button_width = 15;
 phone_camera_center_to_left = 10.4;
 phone_camera_center_to_top = 16.8;
 phone_camera_radius = 5.3;
@@ -44,9 +44,9 @@ shield_common_thickness = 4.0;
 shield_bottom_inner_edge = 12;
 
 // screw
-screw_diameter = 2.0;
+screw_diameter = 2.5;
 screw_depth = 2.0;
-screw_cap_diameter = 5.0;
+screw_cap_diameter = 6.0;
 
 // belt
 belt_connector_width = 8;

@@ -5,13 +5,22 @@ upper_part_height = phone_height + shield_common_thickness * 2;
 
 difference(){
 	union(){
+		// MAIN SHIELD
 		difference(){
 			cube([upper_part_width, upper_part_height, phone_bottom_thickness]);
 			translate([shield_common_thickness, shield_common_thickness, 0])
 				cube([phone_width, phone_height, phone_bottom_thickness]);
 		}
+		// CONNECTOR4
 		connector4(upper_part_width, upper_part_height);
+		translate([0, upper_part_height / 2, 0])
+			rotate([0, 0, 90])
+				connector();
+		translate([upper_part_width, upper_part_height / 2, 0])
+			rotate([0, 0, -90])
+				connector();
 
+		// MIC SIDE BLOCK
 		translate([upper_part_width, upper_part_height, phone_bottom_thickness])
 			rotate([0, 0, 180])
 				difference(){
@@ -33,7 +42,7 @@ difference(){
 	}
 	// SPEAKER HOLE
 	translate([upper_part_width / 2 - phone_speaker_width / 2, phone_speaker_to_edge,  phone_total_thickness])
-		cube([phone_speaker_width, phone_screen_top_to_edge - phone_speaker_to_edge, shield_common_thickness]);
+		cube([phone_speaker_width, phone_screen_top_to_edge - phone_speaker_to_edge, very_long]);
 	// USB HOLE
 	translate([upper_part_width - shield_common_thickness, phone_usb_to_top + shield_common_thickness, phone_usb_to_back])
 		cube([shield_common_thickness, phone_usb_width, phone_usb_height]);
